@@ -4,7 +4,7 @@ This repository contains a **Python implementation** of the Reinforcement Learni
 
 This project implements a framework that combines **Model Predictive Control (MPC)** with **Reinforcement Learning (RL)** to achieve infinite-horizon optimal control performance using a short prediction horizon.
 
-While the original implementation was in MATLAB (using `fmincon`), this Python version has been significantly optimized for performance and mathematical rigor:
+While the original implementation was in MATLAB (using `fmincon`) https://github.com/lmcggg/RL-based-MPC-for-dts , this Python version has been significantly optimized for performance and mathematical rigor:
 
 *   **Solver Upgrade (CasADi + IPOPT):** Unlike the MATLAB version which relies on `fmincon` (SQP with numerical gradients), this implementation utilizes **CasADi** for symbolic modeling and **IPOPT** (Interior Point Optimizer) for solving the nonlinear optimization problem.
     *   **Why this matters:** This enables **Automatic Differentiation (AD)**, providing exact gradients and Hessians to the solver. This matches the solver specification in the original paper and results in significantly faster solving times and better convergence stability compared to finite-difference methods.
@@ -53,7 +53,7 @@ The implementation demonstrates that **RL-MPC (with N=5)** can achieve performan
 
 ## References
 
-Original MATLAB implementation logic served as a reference.
+Original MATLAB implementation logic served as a reference. https://github.com/lmcggg/RL-based-MPC-for-dts
 
 ## 📄 License
 
